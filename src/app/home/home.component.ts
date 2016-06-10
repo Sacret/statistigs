@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFire } from 'angularfire2';
 
 import { AppState } from '../app.service';
 import { Title } from './title';
@@ -36,6 +37,10 @@ export class Home {
   ngOnInit() {
     console.log('hello `Home` component');
     // this.title.getData().subscribe(data => this.data = data);
+  }
+
+  login() {
+    this.af.auth.login();
   }
 
   submitState(value) {

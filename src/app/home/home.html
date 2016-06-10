@@ -5,6 +5,8 @@
     <pre>npm run start:hmr</pre>
   </md-card>
   <md-card>
+    <div> {{ (af.auth | async).uid }} </div>
+    <button (click)="login()">Twitter</button>
     <a href="https://instagram.com/oauth/authorize/?client_id=3d8abf8613f048d3bb5fd6125a9862b6&redirect_uri=http://localhost:3000/&response_type=token">Login</a>
     <md-card-title>Local State</md-card-title>
     <md-card-content>
